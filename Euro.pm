@@ -3,7 +3,7 @@ use strict;
 use Carp;
 
 use vars '$VERSION';
-$VERSION = 0.01;
+$VERSION = 0.02;
 
 my %rates = qw(	LUF 40.3399	ATS 13.76	BEF 40.3399
 		NLG 2.20371	FIM 5.94574	FRF 6.55957
@@ -46,7 +46,7 @@ Math::Calc::Euro - convert between EUR and the old currencies
 
 =head1 SYNOPSIS
 
-    my $guildercalc = Math::Calc::Euro('NLG')
+    my $guildercalc = Math::Calc::Euro->new('NLG')
     print $guildercalc->to_euro(1), "\n"; # 0.45378...
     print $guildercalc->from_national(1), "\n"; # same
     print $guildercalc->to_national(1), "\n"; # 2.20371
